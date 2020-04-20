@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,6 @@ class _MyAppState extends State<MyApp> {
     var question = [
       'What\'s your favourite Color? ',
       'What\'s your favourite animal',
-
     ];
     return MaterialApp(
       home: Scaffold(
@@ -33,7 +33,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text('The question!'),
+            Question(
+              question[_questionIndex],
+            ),
             RaisedButton(
               child: Text(
                 question[_questionIndex],
